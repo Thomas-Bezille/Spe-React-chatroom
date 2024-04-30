@@ -1,3 +1,5 @@
+import { Send } from 'react-feather';
+
 import './Form.scss';
 
 const Form = () => {
@@ -9,7 +11,7 @@ const Form = () => {
         placeholder="Saisissez votre message"
       />
       <button type="submit" className="form-submit">
-        OK
+        <Send size={40} />
       </button>
     </form>
   );
