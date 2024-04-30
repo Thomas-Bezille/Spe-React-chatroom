@@ -1,0 +1,35 @@
+@use 'src/styles/variables' as v;
+
+.messages {
+  padding: 2em;
+  margin-bottom: v.$inputHeight;
+  overflow-y: auto;
+  height: calc(100% - v.$inputHeight);
+
+  .message {
+    margin-bottom: 2rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      border-bottom: 20px solid v.$backgroundMessage;
+      border-left: 25px solid transparent;
+      position: absolute;
+      top: 1em;
+      left: 1.5em;
+    }
+
+    .message-author {
+      padding-left: 1.2rem;
+    }
+
+    .message-content {
+      padding: 1.2rem 1.3rem;
+      margin-top: 0.8rem;
+      border-radius: 1.6rem;
+      background-color: v.$backgroundMessage;
+      color: v.$mediumColor;
+      display: inline-block;
+    }
+  }
+}

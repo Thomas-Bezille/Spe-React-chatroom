@@ -1,9 +1,11 @@
+import Messages from '../Messages/Messages';
+
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <div>Messages</div>
+      <Messages />
       <div>Form</div>
     </div>
   );
