@@ -1,0 +1,27 @@
+@use 'src/styles/variables' as v;
+
+.form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .form-input {
+    height: v.$inputHeight;
+    border: none;
+    font-size: 1.2em;
+    padding: 1rem;
+    width: 100%;
+    padding-right: v.$inputHeight;
+  }
+
+  .form-submit {
+    width: v.$inputHeight;
+    height: v.$inputHeight;
+    background-color: transparent;
+    color: v.$mediumColor;
+    border: none;
+    position: absolute;
+    right: 0;
+  }
+}
