@@ -9,4 +9,4 @@ const chatReducer = (state = initialState, action = {}) => {
   }
 };
 
-export default reducer;
+export default chatReducer;
