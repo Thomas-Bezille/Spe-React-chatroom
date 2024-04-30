@@ -50,5 +50,6 @@ module.exports = {
     'linebreak-style': 0,
     'no-restricted-imports': 0,
     'import/no-extraneous-dependencies': 0,
-  },
+  }
+  'prettier/prettier': 0,
 };
