@@ -17,6 +17,7 @@ const initialState = {
       text: "T'as pas des super croquettes ?",
     },
   ],
+  inputMessage: '',
 };
 
 const chatReducer = (state = initialState, action = {}) => {
