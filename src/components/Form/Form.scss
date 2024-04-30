@@ -23,5 +23,10 @@
     border: none;
     position: absolute;
     right: 0;
+
+    &:hover {
+      color: v.$darkColor;
+      transition: all 0.2s;
+    }
   }
 }

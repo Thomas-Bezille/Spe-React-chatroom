@@ -1,3 +1,5 @@
+import { CHANGE_INPUT_MESSAGE } from '../components/actions/chat';
+
 const initialState = {
   // State initial
   messages: [
@@ -22,6 +24,12 @@ const initialState = {
 
 const chatReducer = (state = initialState, action = {}) => {
   switch (action.type) {
+    case CHANGE_INPUT_MESSAGE:
+      return {
+        ...state,
+        inputMessage: action.value,
+      };
+
     default:
       return state;
   }

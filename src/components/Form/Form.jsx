@@ -1,10 +1,13 @@
 import { Send } from 'react-feather';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import './Form.scss';
+import { changeInputMessage } from '../actions/chat';
 
 const Form = () => {
   const value = useSelector((state) => state.inputMessage);
+
+  const dispatch = useDispatch();
 
   return (
     <form className="form">
@@ -13,6 +16,10 @@ const Form = () => {
         className="form-input"
         placeholder="Saisissez votre message"
         value={value}
+        onChange={(event) => {
+          const action = changeInputMessage(event.target.value);
+          dispatch(action);
+        }}
       />
       <button type="submit" className="form-submit">
         <Send size={40} />
