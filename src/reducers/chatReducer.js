@@ -1,8 +1,15 @@
 import { CHANGE_INPUT_MESSAGE, ADD_MESSAGE } from '../components/actions/chat';
+import { getNextId } from '../utils';
 
 const initialState = {
   // State initial
-  messages: [],
+  messages: [
+    {
+      id: 1,
+      author: 'Super Chat',
+      text: 'Tapez votre premier message',
+    },
+  ],
   inputMessage: '',
 };
 
@@ -17,7 +24,7 @@ const chatReducer = (state = initialState, action = {}) => {
     case ADD_MESSAGE: {
       // Création du message + ajout dans le tableau des messages du state
       const newMessage = {
-        id: state.messages.length + 1,
+        id: getNextId(state.messages),
         author: 'Super Chat',
         text: state.inputMessage,
       };
