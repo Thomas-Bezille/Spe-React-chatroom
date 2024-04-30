@@ -1,24 +1,8 @@
-import { CHANGE_INPUT_MESSAGE } from '../components/actions/chat';
+import { CHANGE_INPUT_MESSAGE, ADD_MESSAGE } from '../components/actions/chat';
 
 const initialState = {
   // State initial
-  messages: [
-    {
-      id: 1,
-      author: 'Super Chat',
-      text: 'Salut',
-    },
-    {
-      id: 2,
-      author: 'Super Chat',
-      text: 'Comment chat va ?',
-    },
-    {
-      id: 3,
-      author: 'Super Chat',
-      text: "T'as pas des super croquettes ?",
-    },
-  ],
+  messages: [],
   inputMessage: '',
 };
 
@@ -29,6 +13,20 @@ const chatReducer = (state = initialState, action = {}) => {
         ...state,
         inputMessage: action.value,
       };
+
+    case ADD_MESSAGE: {
+      // Création du message + ajout dans le tableau des messages du state
+      const newMessage = {
+        id: state.messages.length + 1,
+        author: 'Super Chat',
+        text: state.inputMessage,
+      };
+      return {
+        ...state,
+        messages: [...state.messages, newMessage],
+        inputMessage: '',
+      };
+    }
 
     default:
       return state;
