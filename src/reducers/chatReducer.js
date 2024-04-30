@@ -1,5 +1,22 @@
 const initialState = {
-  // Ici le state initial
+  // State initial
+  messages: [
+    {
+      id: 1,
+      author: 'Super Chat',
+      text: 'Salut',
+    },
+    {
+      id: 2,
+      author: 'Super Chat',
+      text: 'Comment chat va ?',
+    },
+    {
+      id: 3,
+      author: 'Super Chat',
+      text: "T'as pas des super croquettes ?",
+    },
+  ],
 };
 
 const chatReducer = (state = initialState, action = {}) => {
