@@ -1,0 +1,40 @@
+@use 'src/styles/variables' as v;
+
+.settings {
+  position: fixed;
+  top: 1em;
+  right: 2em;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  padding: 0.8em;
+
+  .settings-toggle {
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    background-color: #fff;
+    color: v.$darkColor;
+    line-height: 29px;
+
+    &.settings-toggle--open {
+      transform: rotate(45deg);
+    }
+  }
+
+  .settings-form {
+    background-color: #fff;
+    padding: 1em;
+    margin-left: 0.8em;
+
+    .settings-submit {
+      background-color: v.$darkColor;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 1rem;
+      font-size: 1.2em;
+    }
+  }
+}

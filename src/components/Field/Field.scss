@@ -1,3 +1,5 @@
+@use 'src/styles/variables' as v;
+
 .field {
   margin: 2rem 0;
   position: relative;
@@ -22,9 +24,9 @@
     font-size: 1.2em;
 
     &:focus {
-      border-color: #f0f;
+      border-color: v.$mediumColor;
       & + .label {
-        color: #f0f;
+        color: v.$mediumColor;
       }
     }
   }
