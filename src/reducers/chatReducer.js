@@ -35,7 +35,7 @@ const chatReducer = (state = initialState, action = {}) => {
       // Création du message + ajout dans le tableau des messages du state
       const newMessage = {
         id: getNextId(state.messages),
-        author: 'Super Chat',
+        author: state.nickname,
         text: state.inputMessage,
       };
       return {
