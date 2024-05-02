@@ -2,6 +2,7 @@ import {
   CHANGE_INPUT_MESSAGE,
   ADD_MESSAGE,
   TOGGLE_SETTINGS_OPEN,
+  CHANGE_SETTINGS_FIELD,
 } from '../actions/chat';
 import { getNextId } from '../utils';
 
@@ -16,6 +17,8 @@ const initialState = {
   ],
   inputMessage: '',
   isSettingsOpen: true,
+  email: '',
+  password: '',
 };
 
 const chatReducer = (state = initialState, action = {}) => {
@@ -44,6 +47,18 @@ const chatReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         isSettingsOpen: !state.isSettingsOpen,
+      };
+
+    case CHANGE_SETTINGS_FIELD:
+      if (action.identifier === 'email') {
+        return {
+          ...state,
+          email: action.value,
+        };
+      }
+      return {
+        ...state,
+        password: action.value,
       };
 
     default:
