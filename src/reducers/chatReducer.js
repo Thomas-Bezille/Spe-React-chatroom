@@ -67,6 +67,9 @@ const chatReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         nickname: action.nickname,
+        isSettingsOpen: false,
+        email: '',
+        password: '',
       };
 
     default:
