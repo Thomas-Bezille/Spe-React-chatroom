@@ -16,7 +16,7 @@
     font-size: 1.2rem;
     background-color: #fff;
     color: v.$darkColor;
-    line-height: 29px;
+    padding-top: 5px;
 
     &.settings-toggle--open {
       transform: rotate(45deg);

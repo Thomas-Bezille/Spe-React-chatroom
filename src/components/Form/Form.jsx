@@ -2,7 +2,7 @@ import { Send } from 'react-feather';
 import { useSelector, useDispatch } from 'react-redux';
 
 import './Form.scss';
-import { addMessage, changeInputMessage } from '../../assets/actions/chat';
+import { addMessage, changeInputMessage } from '../../actions/chat';
 
 const Form = () => {
   const value = useSelector((state) => state.inputMessage);

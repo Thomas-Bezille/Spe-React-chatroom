@@ -1,5 +1,6 @@
 export const CHANGE_INPUT_MESSAGE = 'CHANGE_INPUT_MESSAGE';
 export const ADD_MESSAGE = 'ADD_MESSAGE';
+export const TOGGLE_SETTINGS_OPEN = 'TOGGLE_SETTINGS_OPEN';
 
 // -------------------------------------------------- //
 
@@ -10,4 +11,8 @@ export const changeInputMessage = (newValue) => ({
 
 export const addMessage = () => ({
   type: ADD_MESSAGE,
+});
+
+export const toggleSettingsOpen = () => ({
+  type: TOGGLE_SETTINGS_OPEN,
 });

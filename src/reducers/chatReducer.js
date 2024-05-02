@@ -1,4 +1,8 @@
-import { CHANGE_INPUT_MESSAGE, ADD_MESSAGE } from '../assets/actions/chat';
+import {
+  CHANGE_INPUT_MESSAGE,
+  ADD_MESSAGE,
+  TOGGLE_SETTINGS_OPEN,
+} from '../actions/chat';
 import { getNextId } from '../utils';
 
 const initialState = {
@@ -11,6 +15,7 @@ const initialState = {
     },
   ],
   inputMessage: '',
+  isSettingsOpen: true,
 };
 
 const chatReducer = (state = initialState, action = {}) => {
@@ -34,6 +39,12 @@ const chatReducer = (state = initialState, action = {}) => {
         inputMessage: '',
       };
     }
+
+    case TOGGLE_SETTINGS_OPEN:
+      return {
+        ...state,
+        isSettingsOpen: !state.isSettingsOpen,
+      };
 
     default:
       return state;
