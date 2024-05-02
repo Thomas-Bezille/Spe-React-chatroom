@@ -2,7 +2,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Plus } from 'react-feather';
 
 import Field from '../Field/Field';
-import { changeSettingsField, toggleSettingsOpen } from '../../actions/chat';
+import {
+  changeSettingsField,
+  submitLogin,
+  toggleSettingsOpen,
+} from '../../actions/chat';
 
 import './Settings.scss';
 
@@ -29,7 +33,12 @@ const Settings = () => {
         <Plus size="20px" />
       </button>
       {isSettingsOpen && (
-        <form className="settings-form">
+        <form
+          className="settings-form"
+          onSubmit={() => {
+            dispatch(submitLogin());
+          }}
+        >
           <Field
             identifier="email"
             placeholder="pierre@poljak.com"

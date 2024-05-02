@@ -2,6 +2,7 @@ export const CHANGE_INPUT_MESSAGE = 'CHANGE_INPUT_MESSAGE';
 export const ADD_MESSAGE = 'ADD_MESSAGE';
 export const TOGGLE_SETTINGS_OPEN = 'TOGGLE_SETTINGS_OPEN';
 export const CHANGE_SETTINGS_FIELD = 'CHANGE_SETTINGS_FIELD';
+export const SUBMIT_LOGIN = 'SUBMIT_LOGIN';
 
 // -------------------------------------------------- //
 
@@ -22,4 +23,8 @@ export const changeSettingsField = (newValue, identifier) => ({
   type: CHANGE_SETTINGS_FIELD,
   value: newValue,
   identifier: identifier,
+});
+
+export const submitLogin = () => ({
+  type: SUBMIT_LOGIN,
 });
