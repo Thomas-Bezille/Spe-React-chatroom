@@ -1,4 +1,4 @@
-import { CHANGE_INPUT_MESSAGE, ADD_MESSAGE } from '../components/actions/chat';
+import { CHANGE_INPUT_MESSAGE, ADD_MESSAGE } from '../assets/actions/chat';
 import { getNextId } from '../utils';
 
 const initialState = {
