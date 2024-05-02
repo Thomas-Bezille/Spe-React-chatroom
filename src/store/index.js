@@ -4,11 +4,11 @@ import { composeWithDevTools } from '@redux-devtools/extension';
 import reducer from '../reducers/chatReducer';
 
 // On importe les middlewares
-import authMiddlware from '../middlewares/authMiddlware';
+import authMiddleware from '../middlewares/authMiddleware';
 
 // On construit le enhancer pour les middleware : appel à applyMiddleware avec les middlewares en arguments
 const enhancerWithMiddlewares = applyMiddleware(
-  authMiddlware
+  authMiddleware
   // anotherMiddleware
 );
 

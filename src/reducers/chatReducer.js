@@ -3,6 +3,7 @@ import {
   ADD_MESSAGE,
   TOGGLE_SETTINGS_OPEN,
   CHANGE_SETTINGS_FIELD,
+  HANDLE_SUCCESSFUL_LOGIN,
 } from '../actions/chat';
 import { getNextId } from '../utils';
 
@@ -19,6 +20,7 @@ const initialState = {
   isSettingsOpen: true,
   email: '',
   password: '',
+  nickname: '',
 };
 
 const chatReducer = (state = initialState, action = {}) => {
@@ -59,6 +61,12 @@ const chatReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         password: action.value,
+      };
+
+    case HANDLE_SUCCESSFUL_LOGIN:
+      return {
+        ...state,
+        nickname: action.nickname,
       };
 
     default:

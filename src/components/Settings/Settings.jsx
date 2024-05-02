@@ -35,7 +35,8 @@ const Settings = () => {
       {isSettingsOpen && (
         <form
           className="settings-form"
-          onSubmit={() => {
+          onSubmit={(event) => {
+            event.preventDefault();
             dispatch(submitLogin());
           }}
         >
