@@ -9,13 +9,7 @@ import { getNextId } from '../utils';
 
 const initialState = {
   // State initial
-  messages: [
-    {
-      id: 1,
-      author: 'Super Chat',
-      text: 'Tapez votre premier message',
-    },
-  ],
+  messages: [],
   inputMessage: '',
   isSettingsOpen: true,
   email: '',
