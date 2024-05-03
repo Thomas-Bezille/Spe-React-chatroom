@@ -5,10 +5,12 @@ import reducer from '../reducers/chatReducer';
 
 // On importe les middlewares
 import authMiddleware from '../middlewares/authMiddleware';
+import socketMiddleware from '../middlewares/socketMiddleware';
 
 // On construit le enhancer pour les middleware : appel à applyMiddleware avec les middlewares en arguments
 const enhancerWithMiddlewares = applyMiddleware(
   authMiddleware
+  socketMiddleware
   // anotherMiddleware
 );
 
