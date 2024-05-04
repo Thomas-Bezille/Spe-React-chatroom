@@ -5,6 +5,7 @@ export const CHANGE_SETTINGS_FIELD = 'CHANGE_SETTINGS_FIELD';
 export const SUBMIT_LOGIN = 'SUBMIT_LOGIN';
 export const HANDLE_SUCCESSFUL_LOGIN = 'HANDLE_SUCCESSFUL_LOGIN';
 export const SEND_MESSAGE = 'SEND_MESSAGE';
+export const HANDLE_MESSAGE_RECEIVED = 'HANDLE_MESSAGE_RECEIVED';
 
 // -------------------------------------------------- //
 
@@ -38,4 +39,9 @@ export const handleSuccessFulLogin = (nickname) => ({
 
 export const sendMessage = () => ({
   type: SEND_MESSAGE,
+});
+
+export const handleMessageReceived = (newMessage) => ({
+  type: HANDLE_MESSAGE_RECEIVED,
+  newMessage,
 });

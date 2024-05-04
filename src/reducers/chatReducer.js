@@ -4,6 +4,7 @@ import {
   TOGGLE_SETTINGS_OPEN,
   CHANGE_SETTINGS_FIELD,
   HANDLE_SUCCESSFUL_LOGIN,
+  HANDLE_MESSAGE_RECEIVED,
 } from '../actions/chat';
 import { getNextId } from '../utils';
 
@@ -64,6 +65,12 @@ const chatReducer = (state = initialState, action = {}) => {
         isSettingsOpen: false,
         email: '',
         password: '',
+      };
+
+    case HANDLE_MESSAGE_RECEIVED:
+      return {
+        ...state,
+        messages: [...state.messages, action.newMessage],
       };
 
     default:

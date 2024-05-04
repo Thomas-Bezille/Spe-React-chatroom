@@ -1,4 +1,8 @@
-import { HANDLE_SUCCESSFUL_LOGIN, SEND_MESSAGE } from '../actions/chat';
+import {
+  HANDLE_SUCCESSFUL_LOGIN,
+  SEND_MESSAGE,
+  handleMessageReceived,
+} from '../actions/chat';
 
 let socket;
 
@@ -11,8 +15,7 @@ const socketMiddleware = (store) => (next) => (action) => {
       socket = window.io('http://localhost:3001');
 
       socket.on('server_send_message', (data) => {
-        console.log(data);
-        // todo : Ajout du message sur l'interface
+        store.dispatch(handleMessageReceived(data));
       });
       break;
 
