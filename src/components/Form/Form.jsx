@@ -2,7 +2,11 @@ import { Send } from 'react-feather';
 import { useSelector, useDispatch } from 'react-redux';
 
 import './Form.scss';
-import { addMessage, changeInputMessage } from '../../actions/chat';
+import {
+  addMessage,
+  changeInputMessage,
+  sendMessage,
+} from '../../actions/chat';
 
 const Form = () => {
   const value = useSelector((state) => state.inputMessage);
@@ -14,7 +18,7 @@ const Form = () => {
       className="form"
       onSubmit={(event) => {
         event.preventDefault();
-        const action = addMessage();
+        const action = sendMessage();
         dispatch(action);
       }}
     >

@@ -9,7 +9,7 @@ import socketMiddleware from '../middlewares/socketMiddleware';
 
 // On construit le enhancer pour les middleware : appel à applyMiddleware avec les middlewares en arguments
 const enhancerWithMiddlewares = applyMiddleware(
-  authMiddleware
+  authMiddleware,
   socketMiddleware
   // anotherMiddleware
 );
