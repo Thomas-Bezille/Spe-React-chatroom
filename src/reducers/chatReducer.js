@@ -4,6 +4,7 @@ import {
   CHANGE_SETTINGS_FIELD,
   HANDLE_SUCCESSFUL_LOGIN,
   HANDLE_MESSAGE_RECEIVED,
+  SEND_MESSAGE,
 } from '../actions/chat';
 import { getNextId } from '../utils';
 
@@ -56,6 +57,12 @@ const chatReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         messages: [...state.messages, action.newMessage],
+      };
+
+    case SEND_MESSAGE:
+      return {
+        ...state,
+        inputMessage: '',
       };
 
     default:
